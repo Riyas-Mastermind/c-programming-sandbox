@@ -26,7 +26,8 @@ int main()
     printf("Here is what you have entered\n");
     printf("First Letter in Name: %c\n", name_letter);
     printf("Pincode: %d\n", pincode);
-    printf("Height: %f ft\n", height);
+    printf("Height: %f ft\n", height); //32-bits float as per IEEE 754 provides roughty ~7 significant decimal digits 
+    //float has 23 bits of mantissa 
     printf("Location: %.20lf %.20lf\n", latitude, longitude); 
     /*
     A standard 64-bit IEEE 754 double provides roughly 15 to 17 significant decimal digits
@@ -65,6 +66,6 @@ int main()
     fill 20 decimal slots. In this Original input had 552655 at the end, but the double
     completely dropped those and replaced them with 7704 because it ran out of storage bits.
     */
-    
+
     return 0;
 }
