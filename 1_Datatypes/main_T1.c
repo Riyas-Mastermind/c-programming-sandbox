@@ -45,7 +45,26 @@ int main()
     printf("Location: %.20lf %.20lf\n", latitude, longitude);
     ...
 
+    Look at how the output breaks down into real precision versus fake noise:
+
+    Input:
+    ...
+    Enter latitude & longitude of your address: 1.2366252655225635552655 2.3325525563654132355412
     
+    Output:
+    ...
+    Location: 1.23662526552256357704 2.33255255636541303232
+
+            1.2366252655225635                      7704
+                    |                                 |
+     Real Stored Precision(16 digits)         Nosie / Garbage Digits
+    
+    The first ~16 digits match what the double successfully captured from your input.
+    
+    The trailing digits (7704) are completely fabricated by the printing function trying to
+    fill 20 decimal slots. In this Original input had 552655 at the end, but the double
+    completely dropped those and replaced them with 7704 because it ran out of storage bits.
     */
+    
     return 0;
 }
