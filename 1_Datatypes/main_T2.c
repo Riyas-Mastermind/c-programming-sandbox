@@ -9,7 +9,7 @@ Description
 
 int num1, num2;
 
-int main(void)
+int main()
 {
     printf("Enter the num1 value: ");
     scanf("%d", &num1);
