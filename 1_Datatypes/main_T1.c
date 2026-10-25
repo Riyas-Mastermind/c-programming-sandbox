@@ -27,7 +27,25 @@ int main()
     printf("First Letter in Name: %c\n", name_letter);
     printf("Pincode: %d\n", pincode);
     printf("Height: %f ft\n", height);
-    printf("Location: %lf %lf\n", latitude, longitude);
+    printf("Location: %.20lf %.20lf\n", latitude, longitude); 
+    /*
+    A standard 64-bit IEEE 754 double provides roughly 15 to 17 significant decimal digits
+    of precision. Any decimal digits beyoned that precision limit connot be stored exactly.
 
+    When a printf statement or formatter is told to show 20 decimal place(e.g.., %.20lf),
+    it blindly fills all 20 slots by converting the binary bits back into decimal. Because
+    a double only has enough memory to store about 15 to 17 significant digits, everything 
+    past that limit is just mathematical guesswork and garbage data.
+
+    e.g.., 
+    ...
+    printf("Enter latitude & longitude of your address: ");
+    scanf("%lf%lf", &latitude, &longitude);  
+    ...
+    printf("Location: %.20lf %.20lf\n", latitude, longitude);
+    ...
+
+    
+    */
     return 0;
 }
