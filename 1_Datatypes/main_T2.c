@@ -15,7 +15,7 @@ int main()
     scanf("%d", &num1);
     printf("Enter the num2 value: ");
     scanf("%d", &num2);
-    printf("Sum of two integer: %i %d\n", num1+num2, num1+num2);
+    printf("Sum of two integer: %i %d %p%p\n", num1+num2, num1+num2, num1, num2);
 
     return 0;
 }
