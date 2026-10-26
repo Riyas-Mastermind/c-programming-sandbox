@@ -5,26 +5,26 @@ Description
     2. Write a program to Reverse a Positive number ?
 */ 
 
-#include<stdio.h>
+#include <stdio.h>
 
-unsigned int num;
-unsigned int rev = 0;
+int num, rev = 0;
 
 int main()
 {
     printf("Enter a number: ");
-    scanf("%u", &num);
-    //printf("Enter a No of digits: ");
-    //scanf("%u", &limit);
-
+    scanf("%d", &num);
+    if(num < 0)
+    {
+        printf("Please enter a positive integer\n");
+        return -1;
+    }
+    
     while(num!=0)
     {
-        int rem = num % 10;
-        rev = (rev*10) + rem;
+        int rem = num%10;
+        rev = (rev*10)+rem;
         num /= 10;
-   
     }
-    printf("%u\n", rev);
-    
+    printf("Reversed number is %d", rev);
     return 0;
 }
