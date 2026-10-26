@@ -25,6 +25,6 @@ int main()
         rev = (rev*10)+rem;
         num /= 10;
     }
-    printf("Reversed number is %d", rev);
+    printf("Reversed number is %d\n", rev);
     return 0;
 }
