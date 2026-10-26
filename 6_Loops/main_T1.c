@@ -14,15 +14,17 @@ int main()
 {
     printf("Enter a number: ");
     scanf("%u", &num);
+    //printf("Enter a No of digits: ");
+    //scanf("%u", &limit);
 
-    for(int i=num; i>0; i--)
+    while(num!=0)
     {
-        rev = num % 10;
+        int rem = num % 10;
+        rev = (rev*10) + rem;
         num /= 10;
-        printf("%u", rev);
+   
     }
+    printf("%u\n", rev);
+    
+    return 0;
 }
-
-
-//first let we try store a number in num veriable.
-//secound make that % num ;
