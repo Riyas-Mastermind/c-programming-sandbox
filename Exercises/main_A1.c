@@ -18,9 +18,22 @@ int main()
 {
     printf("Enter a Number: ");
     if(scanf("%d", &num)!=1){
-        printf("Error : Enter the only integer value: ");
+        printf("Error: Enter the only integer value.\n");
         return -1;
     }
 
-    
+    if(num <= 0)
+    {
+        printf("Error: Please enter only +Ve integer value.\n")
+        return -2;
+    }
+    else
+    {
+        for(int i=0; i<num; i++)
+        {
+            printf("%d ", power);
+            power *= 2;
+        }
+    }
+    return 0;
 }
