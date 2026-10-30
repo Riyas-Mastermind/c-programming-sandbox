@@ -2,10 +2,10 @@
 Description
     Name: M Mohammed Riyaz
     Date: 30/10/2025
-    1. Write a program that checks wether a given number is a spy number. ?
+    1. Write a program that checks wether a given number is a Niven Number. ?
 
-    INPUT: 1124 -> OUTPUT: Spy Number.
-    INPUT: 4567 -> OUTPUT: Is not a Spy Number.
+    INPUT: 18 -> sum -> 1+8 => 9; 18 % 9 == 0; then this Niven Number;
+    INPUT: 19 -> sum -> 1+9 => 10; 19 % 10 != 0; then this is not Niven Number;
 */ 
 
 #include<stdio.h>
