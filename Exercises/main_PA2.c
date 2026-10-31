@@ -3,7 +3,7 @@ Description
     Name: M Mohammed Riyaz
     Date: 31/10/2025
     
-    1. Problem Statement: 
+    2. Problem Statement: 
             You are given an integer 'N' representing the number of rows. Write a program that prints a centered, symmetric alphabet pyramid of 'N' lines.   
             For each row 'i' (where 'i' ranges from 1 to 'N'):
                 The row is padded with leading spaces to maintain a centered pyramid structure.
