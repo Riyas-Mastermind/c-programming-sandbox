@@ -5,7 +5,8 @@ Description
     
     1. Problem Statement: 
             You are given an integer 'N' representing the number of rows. 
-            Write a program that prints an alphabet triangle pattern of 'N' lines.   
+            Write a program that prints an alphabet triangle pattern of 'N' lines.  
+             
             For each row 'i' (where 'i' ranges from 1 to 'N'): 
                 The row starts with the 'i-th' uppercase letter of the English alphabet (e.g., row 1 is 'A', row 2 is 'B', row 3 is 'C', etc.).
                 It then prints letters backward sequentially down to 'A'. 
