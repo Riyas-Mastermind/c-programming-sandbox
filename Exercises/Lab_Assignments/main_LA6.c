@@ -14,27 +14,36 @@ Description
 
 int main()
 {
-  int num = 1729;
-  int sum = 0;
+  int num;
+  printf("Enter a number: ");
+  scanf("%d", &num);
+
   int temp = num;
-  
+  int sum = 0;
+
   while(temp)
   {
     int rem = temp % 10;
     temp /= 10;
     sum += rem;
-    
-    if(temp == 0)
+
+    if(temp == 0 && sum != 1)
     {
-      temp = sum;
-      sum = 0;
+      if(sum <= 9)
+      {
+        printf("%d is not a magice number.\n", num);
+        break;
+      }
+      else if(sum > 9)
+      {
+        temp = sum;
+        sum = 0;
+      }
     }
-    else if(sum == 1 || (temp == 1 && sum == 0))
-    {
-      printf("%d is a Magic Number.\n",num);
-    }
+    else if(temp == 0 && sum == 1)
+      printf("%d is a magic number.\n", num);
+
   }
-  if(sum != 1)
-    printf("%d is not a Magic Number.\n",num);
+  
   return 0;
-} 
+}
