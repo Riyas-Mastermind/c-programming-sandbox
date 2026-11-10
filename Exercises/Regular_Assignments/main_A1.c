@@ -13,40 +13,42 @@ Description
 
 #include<stdio.h>
 
-int main() {
+int main()
+{
   int num;
-  int rem = 0;
-  int squ = 0;
-  
   printf("Enter a number: ");
-  scanf("%d",&num);
-  
+  scanf("%d", &num);
+
   int temp = num;
-  
-while(temp)
+  int squ = 0;
+
+  while(temp > 0)
   {
-    rem = temp % 10;
+    int rem = temp % 10;
     temp /= 10;
-    squ += (rem*rem);
-    
-    if(temp == num)
+    squ += (rem * rem);
+
+    // When we finish extracting all digits of the current temp number:
+    if (temp == 0)
     {
-      printf("This number is Unhappy.\n");
-      break;
-    }
-    else if(temp == 0)
-    {
-      if(squ != 1)
-      {
-        temp = squ;
-        squ = 0;
-      }
-      else if(squ == 1)
+      if (squ == 1)
       {
         printf("This number is Happy.\n");
         break;
       }
+      // If it hits 4, it's trapped in the unhappy cycle
+      else if (squ == 4)
+      {
+        printf("This number is Unhappy.\n");
+        break;
+      }
+      // Otherwise, reset temp to our new sum and keep going
+      else
+      {
+        temp = squ;
+        squ = 0;
+      }
     }
-  }
+  } 
   return 0;
 }

@@ -11,10 +11,6 @@ Description
         which is less then 10, So 10 is an Deficient Number.
 */ 
 
-
-
-
-
 #include<stdio.h>
 
 int main()
